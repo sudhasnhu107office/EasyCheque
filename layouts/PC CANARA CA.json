@@ -327,7 +327,7 @@
         "showIf": {
           "field": "ifscCode",
           "present": true
-        },
+        }
       },
       {
         "id": "account-label",
