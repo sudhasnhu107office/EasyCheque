@@ -6,14 +6,15 @@
 window.ChequeLayout = (() => {
 
     async function load(bank) {
-        const safeBank = String(bank || "").trim().toUpperCase();
+        const safeBank = String(bank || "")
+    .trim()
+    .toUpperCase();
 
-        // Allow letters, numbers, spaces, hyphens, underscores and parentheses
-        if (!/^[A-Z0-9 _()-]+$/.test(safeBank)) {
-            throw new Error("Invalid bank identifier.");
-        }
-
-        const fileName = encodeURIComponent(safeBank);
+// Remove all special characters, preserving spaces
+const fileName = safeBank
+    .replace(/[^A-Z0-9 ]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 
         const response = await fetch(
             `layouts/${fileName}.json`,
