@@ -234,42 +234,67 @@ const fileName = safeBank
                 visibleRows.forEach(row => {
 
                     // Position divider immediately ABOVE Account No.
-                    if (
-                        !dividerPlaced &&
-                        row.field === dynamic.dividerBeforeField
-                    ) {
+if (
+    !dividerPlaced &&
+    row.field === dynamic.dividerBeforeField
+) {
 
-                        const divider = elements.find(
-                            element => element.id === dynamic.dividerId
-                        );
+    const divider = elements.find(
+        element => element.id === dynamic.dividerId
+    );
 
-                        if (divider) {
-                            elementOverrides.set(dynamic.dividerId, {
-                                y: currentY
-                                    - Number(dynamic.dividerGapAbove || 2.5)
-                                    + 2.8
-                            });
-                        }
+    let dividerVisible = !!divider && divider.visible !== false;
 
-                        currentY += Number(dynamic.dividerGapBelow || 2.5);
+    // Check conditional visibility
+    if (dividerVisible && divider.showIf) {
+        const actual = String(
+            data[divider.showIf.field] ?? ""
+        ).trim().toLowerCase();
 
-                        dividerPlaced = true;
-                    }
+        if (
+            divider.showIf.present === true &&
+            actual === ""
+        ) {
+            dividerVisible = false;
+        }
+
+        if (
+            divider.showIf.equals != null &&
+            actual !== String(divider.showIf.equals)
+                .trim()
+                .toLowerCase()
+        ) {
+            dividerVisible = false;
+        }
+    }
+
+    if (dividerVisible) {
+        elementOverrides.set(dynamic.dividerId, {
+            y: currentY
+                - Number(dynamic.dividerGapAbove || 2.5)
+                + 2.8
+        });
+
+        currentY += Number(dynamic.dividerGapBelow || 2.5);
+    }
+
+    dividerPlaced = true;
+}
 
 
-                    // Label position
-                    elementOverrides.set(row.labelId, {
-                        y: currentY
-                    });
+// Label position
+elementOverrides.set(row.labelId, {
+    y: currentY
+});
 
 
-                    // Value position
-                    elementOverrides.set(row.valueId, {
-                        y: currentY - 0.2
-                    });
+// Value position
+elementOverrides.set(row.valueId, {
+    y: currentY - 0.2
+});
 
 
-                    currentY += Number(dynamic.rowGap);
+currentY += Number(dynamic.rowGap);
                 });
 
 
