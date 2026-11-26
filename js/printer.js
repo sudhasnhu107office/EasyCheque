@@ -10,13 +10,24 @@ window.ChequePrinter = (() => {
     style.textContent = `@media print { @page { size: ${width}mm ${height}mm; margin: 0; } }`;
   }
 
-  function print(container, config) {
+  
+function print(container, config) {
     const width = Number(config.page.width);
     const height = Number(config.page.height);
+
+    if (!(width > 0 && height > 0)) {
+        throw new Error("Invalid cheque page dimensions.");
+    }
+
     setPageSize(width, height);
+
+    container.style.width = `${width}mm`;
+    container.style.height = `${height}mm`;
     container.style.transform = "none";
+
     window.print();
-  }
+}
+  
 
 
   async function loadScript(src, globalName) {
