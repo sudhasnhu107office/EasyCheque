@@ -1,21 +1,35 @@
 /* Bank layout loader and rendering helpers. All bank-specific geometry belongs in layouts/*.json. */
 window.ChequeLayout = (() => {
   async function load(bank) {
+  ad(bank) block with:
+async function load(bank) {
+
     const safeBank = String(bank || "").trim().toUpperCase();
 
+    // Allow letters, numbers, spaces, hyphens, underscores and parentheses
     if (!/^[A-Z0-9 _()-]+$/.test(safeBank)) {
         throw new Error("Invalid bank identifier.");
     }
 
+    const fileName = encodeURIComponent(safeBank);
+
     const response = await fetch(
-        `layouts/${encodeURIComponent(safeBank)}.json`,
+        `layouts/${fileName}.json`,
         { cache: "no-store" }
     );
-    if (!response.ok) throw new Error(`Could not load layout: layouts/${safeBank}.json (HTTP ${response.status})`);
+
+    if (!response.ok) {
+        throw new Error(
+            `Could not load layout: layouts/${fileName}.json (HTTP ${response.status})`
+        );
+    }
+
     const config = await response.json();
+
     validate(config);
+
     return config;
-  }
+}
 
   function validate(config) {
     if (!config.page || !Number(config.page.width) || !Number(config.page.height)) {
