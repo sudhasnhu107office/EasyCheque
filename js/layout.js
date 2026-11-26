@@ -286,7 +286,7 @@ if (dynamic.contactCardId && newHeight > 0) {
 
         });
     }
-}}
+}
 
 // Render elements
 for (const originalElement of elements) {
