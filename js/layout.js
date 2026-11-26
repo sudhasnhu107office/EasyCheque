@@ -1,9 +1,6 @@
 /* Bank layout loader and rendering helpers. All bank-specific geometry belongs in layouts/*.json. */
 window.ChequeLayout = (() => {
   async function load(bank) {
-  ad(bank) block with:
-async function load(bank) {
-
     const safeBank = String(bank || "").trim().toUpperCase();
 
     // Allow letters, numbers, spaces, hyphens, underscores and parentheses
