@@ -2,10 +2,15 @@
 window.ChequeLayout = (() => {
   async function load(bank) {
     const safeBank = String(bank || "").trim().toUpperCase();
-    if (!/^[A-Z0-9_-]+$/.test(safeBank)) {
-      throw new Error("Invalid or missing bank identifier. Use ?bank=SBI");
+
+    if (!/^[A-Z0-9 _()-]+$/.test(safeBank)) {
+        throw new Error("Invalid bank identifier.");
     }
-    const response = await fetch(`layouts/${encodeURIComponent(safeBank)}.json`, { cache: "no-store" });
+
+    const response = await fetch(
+        `layouts/${encodeURIComponent(safeBank)}.json`,
+        { cache: "no-store" }
+    );
     if (!response.ok) throw new Error(`Could not load layout: layouts/${safeBank}.json (HTTP ${response.status})`);
     const config = await response.json();
     validate(config);
