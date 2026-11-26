@@ -141,9 +141,9 @@
           "valueId": "bank-name"
         },
         {
-          "field": "branchCity",
-          "labelId": "branch-city-label",
-          "valueId": "branch-city"
+          "field": "branch",
+          "labelId": "branch-label",
+          "valueId": "branch"
         },
         {
           "field": "accountNo",
@@ -283,9 +283,9 @@
         }
       },
       {
-        "id": "branch-city-label",
+        "id": "branch-label",
         "type": "text",
-        "value": "Branch / City:",
+        "value": "Branch:",
         "x": 44.8,
         "y": 40.5,
         "width": 43,
@@ -294,14 +294,14 @@
         "fontFamily": "Calibri",
         "color": "#64748B",
         "showIf": {
-          "field": "branchCity",
+          "field": "branch",
           "present": true
         }
       },
       {
-        "id": "branch-city",
+        "id": "branch",
         "type": "text",
-        "field": "branchCity",
+        "field": "branch",
         "x": 88,
         "y": 40.5,
         "width": 69.1,
@@ -312,7 +312,7 @@
         "bold": false,
         "align": "right",
         "showIf": {
-          "field": "branchCity",
+          "field": "branch",
           "present": true
         }
       },
@@ -328,10 +328,6 @@
           "field": "ifscCode",
           "present": true
         },
-	"showIf": {
-          "field": "accountNo",
-          "present": true
-        }
       },
       {
         "id": "account-label",
