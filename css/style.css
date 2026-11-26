@@ -1,0 +1,164 @@
+* { box-sizing: border-box; }
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f6fa;
+}
+
+body { margin: 0; min-width: 320px; }
+button, select { font: inherit; }
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 5vw;
+  color: #fff;
+  background: #114d97;
+}
+.app-header h1 { margin: 0 0 5px; font-size: 22px; }
+.app-header p { margin: 0; opacity: .85; font-size: 13px; }
+.status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.16);
+  font-size: 12px;
+}
+.container { width: min(1100px, 92vw); margin: 28px auto; }
+.toolbar, .preview-panel, .print-panel, .details-panel {
+  background: #fff;
+  border: 1px solid #e2e7ef;
+  border-radius: 12px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  margin-bottom: 18px;
+}
+.side-tabs { display: flex; gap: 6px; }
+.tab {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: #40506a;
+  background: #eef2f7;
+  cursor: pointer;
+}
+.tab.active { color: #fff; background: #114d97; }
+.toolbar-actions { display: flex; align-items: center; gap: 18px; color: #526078; font-size: 13px; }
+.zoom-control { display: flex; align-items: center; gap: 8px; }
+.zoom-control select { padding: 7px; border: 1px solid #d5dce7; border-radius: 6px; }
+.toggle { display: flex; align-items: center; gap: 7px; }
+.preview-panel { padding: 18px; }
+.preview-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+.preview-heading h2, .print-panel h2 { margin: 0 0 5px; font-size: 17px; }
+.preview-heading p, .print-panel p { margin: 0; color: #68758b; font-size: 13px; line-height: 1.5; }
+.preview-note { color: #8a5b16; font-size: 12px; }
+.preview-viewport {
+  min-height: 250px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background: #edf1f6;
+  border-radius: 8px;
+}
+.cheque-page {
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 3px 16px rgba(20,35,60,.15);
+  transform-origin: center center;
+}
+.cheque-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+.cheque-element { position: absolute; white-space: pre-wrap; overflow-wrap: anywhere; }
+.print-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  margin-top: 18px;
+}
+.print-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+.secondary-button {
+  border: 1px solid #114d97;
+  border-radius: 8px;
+  padding: 12px 20px;
+  min-height: 44px;
+  color: #fff;
+  background: #114d97;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.secondary-button:hover { background: #0d3e7b; }
+.print-actions .primary-button, .print-actions .secondary-button { min-height: 44px; font-size: 14px; line-height: 20px; }
+.secondary-button:disabled, .primary-button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+.primary-button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: #fff;
+  background: #114d97;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.primary-button:hover { background: #0d3e7b; }
+.details-panel { margin-top: 18px; padding: 14px 18px; color: #526078; font-size: 13px; }
+.details-panel summary { cursor: pointer; font-weight: 600; }
+.details-panel pre { overflow: auto; white-space: pre-wrap; }
+.error-message {
+  width: min(1100px, 92vw);
+  margin: 20px auto;
+  padding: 14px;
+  color: #8b1e1e;
+  background: #fff0f0;
+  border: 1px solid #f2caca;
+  border-radius: 8px;
+}
+@media (max-width: 650px) {
+  .app-header { padding: 16px 4vw; }
+  .app-header h1 { font-size: 18px; }
+  .toolbar, .print-panel { align-items: stretch; flex-direction: column; }
+  .toolbar-actions { justify-content: space-between; }
+  .preview-heading { flex-direction: column; }
+  .preview-viewport { justify-content: flex-start; padding: 16px; }
+  .print-actions { width: 100%; flex-direction: column; align-items: stretch; }
+  .print-actions button { width: 100%; min-height: 46px; }
+}
+
+/* Print only the selected cheque side, at the physical dimensions in the bank JSON. */
+@media print {
+  html, body { margin: 0 !important; padding: 0 !important; width: auto !important; background: #fff !important; }
+  body * { visibility: hidden !important; }
+  #cheque, #cheque * { visibility: visible !important; }
+  #cheque {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

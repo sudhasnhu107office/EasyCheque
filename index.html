@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="URL-driven cheque preview and printing application">
+  <title>Cheque Preview & Printing</title>
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Cheque Preview & Printing</h1>
+      <p id="bank-label">Loading bank layout…</p>
+    </div>
+    <span class="status" id="status">Loading</span>
+  </header>
+
+  <main class="container">
+    <section class="toolbar" aria-label="Preview controls">
+      <div class="side-tabs" role="group" aria-label="Cheque side">
+        <button class="tab active" data-side="front" type="button">Front side</button>
+        <button class="tab" data-side="back" type="button">Back side</button>
+      </div>
+      <div class="toolbar-actions">
+        <label class="zoom-control">
+          Zoom
+          <select id="zoom">
+            <option value="0.75">75%</option>
+            <option value="1" selected>100%</option>
+            <option value="1.25">125%</option>
+            <option value="1.5">150%</option>
+          </select>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="show-background" checked>
+          Show background
+        </label>
+      </div>
+    </section>
+
+    <section class="preview-panel">
+      <div class="preview-heading">
+        <div>
+          <h2 id="preview-title">Front side preview</h2>
+          <p id="dimensions">—</p>
+        </div>
+        <span class="preview-note">Preview only — verify printer alignment before use</span>
+      </div>
+      <div class="preview-viewport">
+        <div id="cheque" class="cheque-page" aria-label="Cheque preview"></div>
+      </div>
+    </section>
+
+    <section class="print-panel">
+      <div>
+        <h2>Print</h2>
+        <p>Print only the currently selected side. Use 100% / Actual size and disable browser headers and footers.</p>
+      </div>
+      <div class="print-actions">
+        <button id="pdf-button" class="primary-button" type="button">Download front PDF</button>
+        <button id="print-button" class="primary-button" type="button">Print front side</button>
+      </div>
+    </section>
+
+    <details class="details-panel">
+      <summary>Loaded URL data</summary>
+      <pre id="url-data"></pre>
+    </details>
+  </main>
+
+  <div id="error" class="error-message" role="alert" hidden></div>
+  <script src="js/layout.js?v=3"></script>
+  <script src="js/printer.js?v=3"></script>
+  <script src="js/script.js?v=3"></script>
+</body>
+</html>
