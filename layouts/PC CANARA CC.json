@@ -1,12 +1,12 @@
 {
-  "bank": "PC CANARA(CA)",
+  "bank": "PC CANARA(CC)",
   "page": {
     "width": 202,
     "height": 92,
     "unit": "mm"
   },
   "front": {
-    "background": "assets/PC CANARA CA/front.png",
+    "background": "assets/PC CANARA CC/front.png",
     "elements": [
       {
         "id": "date",
@@ -121,7 +121,6 @@
     ]
   },
   "back": {
-    "/background": "assets/SBI/back.png",
     "dynamicRows": {
       "containerId": "beneficiary-card",
       "contactCardId": "contact-card",
