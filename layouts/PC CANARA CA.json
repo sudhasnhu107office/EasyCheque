@@ -121,7 +121,6 @@
     ]
   },
   "back": {
-    "/background": "assets/SBI/back.png",
     "dynamicRows": {
       "containerId": "beneficiary-card",
       "contactCardId": "contact-card",
