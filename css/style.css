@@ -16,7 +16,7 @@ button, select { font: inherit; }
   gap: 16px;
   padding: 20px 5vw;
   color: #fff;
-  background: #114d97;
+  background: #9F0021; /*#114d97;*/
 }
 .app-header h1 { margin: 0 0 5px; font-size: 22px; }
 .app-header p { margin: 0; opacity: .85; font-size: 13px; }
@@ -101,7 +101,7 @@ button, select { font: inherit; }
   padding: 12px 20px;
   min-height: 44px;
   color: #fff;
-  background: #114d97;
+  background: #9F0021;/*#114d97;*/
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
