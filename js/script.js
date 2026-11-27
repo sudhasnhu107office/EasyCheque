@@ -141,7 +141,7 @@
       `${config.page.width} × ${config.page.height} ${config.page.unit || "mm"}`;
     printButton.textContent = `Print ${currentSide} side`;
     document.getElementById("pdf-button").textContent = `Download ${currentSide} PDF`;
-    document.title = `${config.bank || bank} Cheque - ${currentSide}`;
+    //document.title = `${config.bank || bank} Cheque - ${currentSide}`;
   }
 
   async function init() {
