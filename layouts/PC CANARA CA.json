@@ -19,7 +19,7 @@
         "fontFamily": "Calibri",
         "align": "left",
         "bold": true,
-        "color": "#9F0021",
+        "color": "#000000",
         "letterSpacing": 3.38,
         "whiteSpace": "nowrap",
         "height": 6
@@ -34,7 +34,7 @@
         "fontSize": 12,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#9F0021",
+        "color": "#000000",
         "uppercase": true,
         "align": "left",
         "whiteSpace": "nowrap"
@@ -50,6 +50,7 @@
         "fontSize": 12,
         "fontFamily": "Calibri",
         "bold": true,
+        "color": "#000000",
         "align": "left",
         "uppercase": true,
         "lineHeight": "2em"
@@ -64,6 +65,7 @@
         "fontSize": 12,
         "fontFamily": "Calibri",
         "bold": true,
+        "color": "#000000",
         "align": "right",
         "whiteSpace": "nowrap",
         "letterSpacing": 0
