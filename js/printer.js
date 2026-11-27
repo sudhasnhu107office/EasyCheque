@@ -51,6 +51,8 @@ function print(container, config) {
       throw new Error("Invalid page dimensions in bank JSON.");
     }
 
+    document.getElementById("show-background").checked = false;
+    
     await loadScript(
       "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js",
       "html2canvas"
