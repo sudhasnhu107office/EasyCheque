@@ -106,7 +106,7 @@ button, select { font: inherit; }
   cursor: pointer;
   white-space: nowrap;
 }
-.secondary-button:hover { background: #eef2f7; /*#7D001A; /*#0d3e7b;*/ color: #9F0021;  }
+.secondary-button:hover { background: #7D001A; /*#0d3e7b;*/}
 .print-actions .primary-button, .print-actions .secondary-button { min-height: 44px; font-size: 14px; line-height: 20px; }
 .secondary-button:disabled, .primary-button:disabled {
   opacity: .65;
