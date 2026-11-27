@@ -95,7 +95,7 @@
         "fontFamily": "Calibri",
         "bold": true,
         "letterSpacing": 0,
-        "color": "#222222",
+        "color": "#000000",
         "align": "center",
         "uppercase": true,
         "whiteSpace": "nowrap",
@@ -200,7 +200,7 @@
         "height": 4.5,
         "fontSize": 9.5,
         "fontFamily": "Calibri",
-        "color": "#64748B",
+        "color": "#000000",
         "align": "right",
         "letterSpacing": 0.12,
         "bold": false
@@ -224,7 +224,7 @@
         "height": 4.5,
         "fontSize": 9.5,
         "fontFamily": "Calibri",
-        "color": "#64748B",
+        "color": "#000000",
         "showIf": {
           "field": "beneficiaryName",
           "present": true
@@ -241,7 +241,7 @@
         "fontSize": 10,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#111827",
+        "color": "#000000",
         "align": "right",
         "showIf": {
           "field": "beneficiaryName",
@@ -258,7 +258,7 @@
         "height": 4.5,
         "fontSize": 9.5,
         "fontFamily": "Calibri",
-        "color": "#64748B",
+        "color": "#000000",
         "showIf": {
           "field": "bankName",
           "present": true
@@ -275,7 +275,7 @@
         "fontSize": 10,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#263445",
+        "color": "#000000",
         "align": "right",
         "showIf": {
           "field": "bankName",
@@ -292,7 +292,7 @@
         "height": 4.5,
         "fontSize": 9.5,
         "fontFamily": "Calibri",
-        "color": "#64748B",
+        "color": "#000000",
         "showIf": {
           "field": "branch",
           "present": true
@@ -308,7 +308,7 @@
         "height": 5,
         "fontSize": 9.5,
         "fontFamily": "Calibri",
-        "color": "#334155",
+        "color": "#000000",
         "bold": false,
         "align": "right",
         "showIf": {
@@ -340,7 +340,7 @@
         "fontSize": 9.5,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#334155",
+        "color": "#000000",
         "showIf": {
           "field": "accountNo",
           "present": true
@@ -357,7 +357,7 @@
         "fontSize": 10,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#111827",
+        "color": "#000000",
         "align": "right",
         "letterSpacing": 0.18,
         "showIf": {
@@ -376,7 +376,7 @@
         "fontSize": 9.5,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#334155",
+        "color": "#000000",
         "showIf": {
           "field": "ifscCode",
           "present": true
@@ -393,7 +393,7 @@
         "fontSize": 10,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#174E68",
+        "color": "#000000",
         "align": "right",
         "letterSpacing": 0.12,
         "showIf": {
@@ -428,7 +428,7 @@
         "fontSize": 9.5,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#475569",
+        "color": "#000000",
         "letterSpacing": 0.08,
         "showIf": {
           "field": "contactNumber",
@@ -446,7 +446,7 @@
         "fontSize": 10,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#111827",
+        "color": "#000000",
         "align": "right",
         "letterSpacing": 0.15,
         "showIf": {
