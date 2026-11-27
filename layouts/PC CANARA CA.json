@@ -6,7 +6,7 @@
     "unit": "mm"
   },
   "front": {
-    "/background": "assets/SBI/front.png",
+    "background": "assets/PC CANARA CA/front.png",
     "elements": [
       {
         "id": "date",
