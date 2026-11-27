@@ -19,6 +19,7 @@
         "fontFamily": "Calibri",
         "align": "left",
         "bold": true,
+        "color": "#9F0021",
         "letterSpacing": 3.38,
         "whiteSpace": "nowrap",
         "height": 6
@@ -33,6 +34,7 @@
         "fontSize": 12,
         "fontFamily": "Calibri",
         "bold": true,
+        "color": "#9F0021",
         "uppercase": true,
         "align": "left",
         "whiteSpace": "nowrap"
@@ -76,7 +78,7 @@
         "x": 89.5,
         "y": 49,
         "width": 27,
-        "stroke": "#333333",
+        "stroke": "#000000",
         "strokeWidth": 0.5
       },
       {
@@ -111,7 +113,7 @@
         "x": 89.5,
         "y": 57,
         "width": 27,
-        "stroke": "#333333",
+        "stroke": "#000000",
         "strokeWidth": 0.5
       }
     ]
