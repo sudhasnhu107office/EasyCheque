@@ -16,6 +16,9 @@ function print(container, config) {
     const height = Number(config.page.height);
 
     document.getElementById("show-background").checked = false;
+    document.querySelectorAll(".cheque-page").forEach(page => {
+      page.style.backgroundColor = "#ffffff";
+    });
 
     if (!(width > 0 && height > 0)) {
         throw new Error("Invalid cheque page dimensions.");
@@ -54,6 +57,9 @@ function print(container, config) {
     }
 
     document.getElementById("show-background").checked = false;
+    document.querySelectorAll(".cheque-page").forEach(page => {
+      page.style.backgroundColor = "#ffffff";
+    });
     
     await loadScript(
       "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js",
