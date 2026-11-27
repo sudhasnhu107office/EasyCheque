@@ -15,6 +15,8 @@ function print(container, config) {
     const width = Number(config.page.width);
     const height = Number(config.page.height);
 
+    document.getElementById("show-background").checked = false;
+
     if (!(width > 0 && height > 0)) {
         throw new Error("Invalid cheque page dimensions.");
     }
