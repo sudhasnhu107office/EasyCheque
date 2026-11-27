@@ -106,7 +106,7 @@ button, select { font: inherit; }
   cursor: pointer;
   white-space: nowrap;
 }
-.secondary-button:hover { background: #0d3e7b; }
+.secondary-button:hover { background: #7D001A; /*#0d3e7b;*/ }
 .print-actions .primary-button, .print-actions .secondary-button { min-height: 44px; font-size: 14px; line-height: 20px; }
 .secondary-button:disabled, .primary-button:disabled {
   opacity: .65;
@@ -122,7 +122,7 @@ button, select { font: inherit; }
   cursor: pointer;
   white-space: nowrap;
 }
-.primary-button:hover { background: #0d3e7b; }
+.primary-button:hover { background: #7D001A; /*#0d3e7b;*/ }
 .details-panel { margin-top: 18px; padding: 14px 18px; color: #526078; font-size: 13px; }
 .details-panel summary { cursor: pointer; font-weight: 600; }
 .details-panel pre { overflow: auto; white-space: pre-wrap; }
