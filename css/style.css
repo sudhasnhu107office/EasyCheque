@@ -45,7 +45,7 @@ button, select { font: inherit; }
   border: 0;
   border-radius: 8px;
   padding: 10px 15px;
-  color: #40506a;
+  color: #7D001A; /*#40506a;*/
   background: #eef2f7;
   cursor: pointer;
 }
