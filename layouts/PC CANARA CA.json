@@ -187,7 +187,7 @@
         "fontSize": 11,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#174E68",
+        "color": "#9F0021",
         "letterSpacing": 0.12
       },
       {
@@ -357,7 +357,7 @@
         "fontSize": 10,
         "fontFamily": "Calibri",
         "bold": true,
-        "color": "#000000",
+        "color": "#9F0021",
         "align": "right",
         "letterSpacing": 0.18,
         "showIf": {
