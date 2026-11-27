@@ -1,0 +1,463 @@
+{
+  "bank": "PC CANARA(CA)",
+  "page": {
+    "width": 202,
+    "height": 92,
+    "unit": "mm"
+  },
+  "front": {
+    "background": "assets/PC CANARA CA/front.png",
+    "elements": [
+      {
+        "id": "date",
+        "type": "text",
+        "field": "date",
+        "x": 152,
+        "y": 6,
+        "width": 42,
+        "fontSize": 12,
+        "fontFamily": "Calibri",
+        "align": "left",
+        "bold": true,
+        "color": "#000000",
+        "letterSpacing": 3.38,
+        "whiteSpace": "nowrap",
+        "height": 6
+      },
+      {
+        "id": "payee",
+        "type": "text",
+        "field": "payee",
+        "x": 17,
+        "y": 18.5,
+        "width": 145,
+        "fontSize": 12,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "uppercase": true,
+        "align": "left",
+        "whiteSpace": "nowrap"
+      },
+      {
+        "id": "amountWords",
+        "type": "text",
+        "field": "amountWords",
+        "x": 10,
+        "y": 25,
+        "width": 186,
+        "height": 15,
+        "fontSize": 12,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "align": "left",
+        "uppercase": true,
+        "lineHeight": "2em"
+      },
+      {
+        "id": "amount",
+        "type": "text",
+        "field": "amount",
+        "x": 159,
+        "y": 33.5,
+        "width": 30,
+        "fontSize": 12,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "align": "left",
+        "whiteSpace": "nowrap",
+        "letterSpacing": 0
+      },
+      {
+        "id": "account-payee-top-border",
+        "type": "line",
+        "showIf": {
+          "field": "accountPayee",
+          "equals": "yes"
+        },
+        "x": 89.5,
+        "y": 49,
+        "width": 27,
+        "stroke": "#000000",
+        "strokeWidth": 0.5
+      },
+      {
+        "id": "account-payee",
+        "type": "text",
+        "value": "A/c Payee",
+        "showIf": {
+          "field": "accountPayee",
+          "equals": "yes"
+        },
+        "x": 91,
+        "y": 50,
+        "width": 24,
+        "height": 5,
+        "fontSize": 12,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "letterSpacing": 0,
+        "color": "#000000",
+        "align": "center",
+        "uppercase": true,
+        "whiteSpace": "nowrap",
+        "lineHeight": "1.4em"
+      },
+      {
+        "id": "account-payee-bottom-border",
+        "type": "line",
+        "showIf": {
+          "field": "accountPayee",
+          "equals": "yes"
+        },
+        "x": 89.5,
+        "y": 57,
+        "width": 27,
+        "stroke": "#000000",
+        "strokeWidth": 0.5
+      }
+    ]
+  },
+  "back": {
+    "/background": "assets/SBI/back.png",
+    "dynamicRows": {
+      "containerId": "beneficiary-card",
+      "contactCardId": "contact-card",
+      "dividerId": "account-divider",
+      "dividerBeforeField": "accountNo",
+      "dividerGapAbove": 2.5,
+      "dividerGapBelow": 2.5,
+      "gapAfterCard": 2,
+      "startY": 30.2,
+      "rowGap": 5.9,
+      "bottomPadding": 2.8,
+      "rows": [
+        {
+          "field": "beneficiaryName",
+          "labelId": "beneficiary-name-label",
+          "valueId": "beneficiary-name"
+        },
+        {
+          "field": "bankName",
+          "labelId": "bank-name-label",
+          "valueId": "bank-name"
+        },
+        {
+          "field": "branch",
+          "labelId": "branch-label",
+          "valueId": "branch"
+        },
+        {
+          "field": "accountNo",
+          "labelId": "account-label",
+          "valueId": "account-number"
+        },
+        {
+          "field": "ifscCode",
+          "labelId": "ifsc-label",
+          "valueId": "ifsc-code"
+        }
+      ],
+      "hideWhenEmpty": [
+        "beneficiary-card",
+        "beneficiary-heading",
+        "transfer-type",
+        "heading-rule"
+      ]
+    },
+    "elements": [
+      {
+        "id": "beneficiary-card",
+        "type": "rectangle",
+        "x": 40.5,
+        "y": 14,
+        "width": 121,
+        "height": 45.5,
+        "fill": "#F8FAFC",
+        "stroke": "#CBD5E1",
+        "strokeWidth": 0.28,
+        "radius": 3.2
+      },
+      {
+        "id": "beneficiary-heading",
+        "type": "text",
+        "value": "BENEFICIARY DETAILS",
+        "x": 44.8,
+        "y": 19,
+        "width": 62,
+        "height": 5,
+        "fontSize": 11,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#9F0021",
+        "letterSpacing": 0.12
+      },
+      {
+        "id": "transfer-type",
+        "type": "text",
+        "field": "transferType",
+        "x": 132,
+        "y": 20.5,
+        "width": 25.2,
+        "height": 4.5,
+        "fontSize": 9.5,
+        "fontFamily": "Calibri",
+        "color": "#000000",
+        "align": "right",
+        "letterSpacing": 0.12,
+        "bold": false
+      },
+      {
+        "id": "heading-rule",
+        "type": "line",
+        "x": 44.8,
+        "y": 25.7,
+        "width": 112.3,
+        "stroke": "#CBD5E1",
+        "strokeWidth": 0.22
+      },
+      {
+        "id": "beneficiary-name-label",
+        "type": "text",
+        "value": "Beneficiary Name:",
+        "x": 44.8,
+        "y": 28,
+        "width": 43,
+        "height": 4.5,
+        "fontSize": 9.5,
+        "fontFamily": "Calibri",
+        "color": "#000000",
+        "showIf": {
+          "field": "beneficiaryName",
+          "present": true
+        }
+      },
+      {
+        "id": "beneficiary-name",
+        "type": "text",
+        "field": "beneficiaryName",
+        "x": 88,
+        "y": 28,
+        "width": 69.1,
+        "height": 5,
+        "fontSize": 10,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "align": "right",
+        "showIf": {
+          "field": "beneficiaryName",
+          "present": true
+        }
+      },
+      {
+        "id": "bank-name-label",
+        "type": "text",
+        "value": "Bank Name:",
+        "x": 44.8,
+        "y": 34.5,
+        "width": 43,
+        "height": 4.5,
+        "fontSize": 9.5,
+        "fontFamily": "Calibri",
+        "color": "#000000",
+        "showIf": {
+          "field": "bankName",
+          "present": true
+        }
+      },
+      {
+        "id": "bank-name",
+        "type": "text",
+        "field": "bankName",
+        "x": 88,
+        "y": 34.5,
+        "width": 69.1,
+        "height": 5,
+        "fontSize": 10,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "align": "right",
+        "showIf": {
+          "field": "bankName",
+          "present": true
+        }
+      },
+      {
+        "id": "branch-label",
+        "type": "text",
+        "value": "Branch:",
+        "x": 44.8,
+        "y": 40.5,
+        "width": 43,
+        "height": 4.5,
+        "fontSize": 9.5,
+        "fontFamily": "Calibri",
+        "color": "#000000",
+        "showIf": {
+          "field": "branch",
+          "present": true
+        }
+      },
+      {
+        "id": "branch",
+        "type": "text",
+        "field": "branch",
+        "x": 88,
+        "y": 40.5,
+        "width": 69.1,
+        "height": 5,
+        "fontSize": 9.5,
+        "fontFamily": "Calibri",
+        "color": "#000000",
+        "bold": false,
+        "align": "right",
+        "showIf": {
+          "field": "branch",
+          "present": true
+        }
+      },
+      {
+        "id": "account-divider",
+        "type": "line",
+        "x": 44.8,
+        "y": 47,
+        "width": 112.3,
+        "stroke": "#D8E0E9",
+        "strokeWidth": 0.2,
+        "showIf": {
+          "field": "ifscCode",
+          "present": true
+        }
+      },
+      {
+        "id": "account-label",
+        "type": "text",
+        "value": "Account No:",
+        "x": 44.8,
+        "y": 50,
+        "width": 43,
+        "height": 4.8,
+        "fontSize": 9.5,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "showIf": {
+          "field": "accountNo",
+          "present": true
+        }
+      },
+      {
+        "id": "account-number",
+        "type": "text",
+        "field": "accountNo",
+        "x": 88,
+        "y": 50,
+        "width": 69.1,
+        "height": 5.5,
+        "fontSize": 10,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#9F0021",
+        "align": "right",
+        "letterSpacing": 0.18,
+        "showIf": {
+          "field": "accountNo",
+          "present": true
+        }
+      },
+      {
+        "id": "ifsc-label",
+        "type": "text",
+        "value": "IFSC Code:",
+        "x": 44.8,
+        "y": 56.5,
+        "width": 43,
+        "height": 4.8,
+        "fontSize": 9.5,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "showIf": {
+          "field": "ifscCode",
+          "present": true
+        }
+      },
+      {
+        "id": "ifsc-code",
+        "type": "text",
+        "field": "ifscCode",
+        "x": 88,
+        "y": 56.5,
+        "width": 69.1,
+        "height": 5.5,
+        "fontSize": 10,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "align": "right",
+        "letterSpacing": 0.12,
+        "showIf": {
+          "field": "ifscCode",
+          "present": true
+        }
+      },
+      {
+        "id": "contact-card",
+        "type": "rectangle",
+        "x": 40.5,
+        "y": 62.8,
+        "width": 121,
+        "height": 10.8,
+        "fill": "#F8FAFC",
+        "stroke": "#CBD5E1",
+        "strokeWidth": 0.28,
+        "radius": 2.5,
+        "showIf": {
+          "field": "contactNumber",
+          "present": true
+        }
+      },
+      {
+        "id": "contact-label",
+        "type": "text",
+        "value": "Contact Number:",
+        "x": 44.8,
+        "y": 66.2,
+        "width": 47,
+        "height": 4.5,
+        "fontSize": 9.5,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "letterSpacing": 0.08,
+        "showIf": {
+          "field": "contactNumber",
+          "present": true
+        }
+      },
+      {
+        "id": "contact-number",
+        "type": "text",
+        "field": "contactNumber",
+        "x": 94,
+        "y": 65.7,
+        "width": 63.1,
+        "height": 5.5,
+        "fontSize": 10,
+        "fontFamily": "Calibri",
+        "bold": true,
+        "color": "#000000",
+        "align": "right",
+        "letterSpacing": 0.15,
+        "showIf": {
+          "field": "contactNumber",
+          "present": true
+        }
+      }
+    ]
+  }
+}
