@@ -16,8 +16,8 @@ function print(container, config) {
     const height = Number(config.page.height);
 
     document.getElementById("show-background").checked = false;
-    document.querySelectorAll(".cheque-page").forEach(page => {
-      page.style.backgroundColor = "#ffffff";
+    document.querySelectorAll(".cheque-background").forEach(img => {
+      img.style.display = "none";
     });
 
     if (!(width > 0 && height > 0)) {
@@ -57,8 +57,8 @@ function print(container, config) {
     }
 
     document.getElementById("show-background").checked = false;
-    document.querySelectorAll(".cheque-page").forEach(page => {
-      page.style.backgroundColor = "#ffffff";
+    document.querySelectorAll(".cheque-background").forEach(img => {
+      img.style.display = "none";
     });
     
     await loadScript(
