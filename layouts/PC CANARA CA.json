@@ -170,9 +170,9 @@
       {
         "id": "beneficiary-card",
         "type": "rectangle",
-        "x": 34,
-        "y": 10,
-        "width": 134,
+        "x": 40.5,
+        "y": 14,
+        "width": 121,
         "height": 45.5,
         "fill": "#F8FAFC",
         "stroke": "#CBD5E1",
